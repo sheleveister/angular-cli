@@ -1,20 +1,60 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!--<phone></phone>-->
+
+<!--<service></service>-->
+
+<!--<data></data>-->
+
+<!--<app-purchapse></app-purchapse>-->
+
+<!--<app-binding></app-binding>-->
+
+
+<!--<child-comp-->
+  <!--[userName]="name"-->
+  <!--[userAge]="age"-->
+<!--&gt;</child-comp>-->
+<!--<input type="text" [(ngModel)]="name">-->
+<!--<input type="text" [(ngModel)]="age" placeholder="Возраст пользователя">-->
+
+
+<!--<h2>Количество кликов: {{clicks}}</h2>-->
+<!--<child-comp-event-->
+  <!--(onChanged)="onChanged($event)"-->
+<!--&gt;</child-comp-event>-->
+
+
+<!--<child-event-binding [(userName)]="name"></child-event-binding>-->
+<!--<div>Выбранное имя: {{name}}</div>-->
+
+
+<!--<h2>Lifecycle hooks</h2>-->
+<!--<lifecycle-hook [name]="name"></lifecycle-hook>-->
+<!--<input type="text" [(ngModel)]="name">-->
+
+
+<!--<h2>Template reference variable</h2>-->
+<!--<template-ref-var #counter></template-ref-var>-->
+<!--<button (click)="counter.increment()">+</button>-->
+<!--<button (click)="counter.decrement()">-</button>-->
+
+
+<h2>Content Child</h2>
+<app-child-comp>
+  <h3 #headerContent>Welcome {{name}}! This is content child </h3>
+</app-child-comp>
+
+
+<app-ng-class></app-ng-class>
+
+
+<h2>Personal directive</h2>
+<div>
+  <p bold>Hello Angular 2 - this text is bold </p>
+  <p>Angular 2 представляет модульную архитектуру приложения</p>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<div>
+  <p bold [selectedSize]="'18px'" [defaultSize]="'14px'">Hello Angular 2</p>
+  <p>Angular 2 представляет модульную архитектуру приложения</p>
+</div>
 

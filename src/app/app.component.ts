@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
+import { LogService } from './log.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  providers: [DataService, LogService]
 })
+
 export class AppComponent {
-  title = 'app';
+
+  public name: string = 'Tom';
+  public age: number = 24;
+
+  public clicks: number = 0;
+  onChanged(increased) {
+    increased === true ? this.clicks++ : this.clicks--;
+  }
+
 }

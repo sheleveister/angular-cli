@@ -1,0 +1,10 @@
+<h1>Добро пожаловать {{name}} !</h1>
+<p>Возраст: {{age}}</p>
+
+<input type="text" [value]="name">
+
+<input [(ngModel)]="name" placeholder="name">
+
+<p>Количество кликов {{count}}</p>
+<button (click)="increase($event)">Add click</button>
+

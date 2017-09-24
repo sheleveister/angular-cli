@@ -1,0 +1,19 @@
+<div [ngClass]="{verdanaFont: true}">
+  <h1>Hello Angular 2</h1>
+  <p [ngClass]="{verdanaFont: false, timesNewRomanFont: true}">
+    Angular 2 представляет собой модульную архитектуру приложения
+  </p>
+</div>
+
+<div [class.verdanaFont]="true">
+  <h1>Альтернативный вариант привязки</h1>
+  <p [class.verdanaFont]="false" [class.timesNewRomanFont]="true">
+    Так тоже будет работать, результат аналогичный
+  </p>
+</div>
+
+<div [ngClass]="{invisible: visibility}">
+  <h1>Hello Angular 2</h1>
+  <p>Динамическое изменение стилей</p>
+</div>
+<button (click)="toggle()">Change visibility class</button>
