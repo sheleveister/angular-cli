@@ -1,41 +1,41 @@
-<!--<phone></phone>-->
+<phone></phone>
 
-<!--<service></service>-->
+<service></service>
 
-<!--<data></data>-->
+<data></data>
 
-<!--<app-purchapse></app-purchapse>-->
+<app-purchapse></app-purchapse>
 
-<!--<app-binding></app-binding>-->
-
-
-<!--<child-comp-->
-  <!--[userName]="name"-->
-  <!--[userAge]="age"-->
-<!--&gt;</child-comp>-->
-<!--<input type="text" [(ngModel)]="name">-->
-<!--<input type="text" [(ngModel)]="age" placeholder="Возраст пользователя">-->
+<app-binding></app-binding>
 
 
-<!--<h2>Количество кликов: {{clicks}}</h2>-->
-<!--<child-comp-event-->
-  <!--(onChanged)="onChanged($event)"-->
-<!--&gt;</child-comp-event>-->
+<child-comp
+  [userName]="name"
+  [userAge]="age"
+></child-comp>
+<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="age" placeholder="Возраст пользователя">
 
 
-<!--<child-event-binding [(userName)]="name"></child-event-binding>-->
-<!--<div>Выбранное имя: {{name}}</div>-->
+<h2>Количество кликов: {{clicks}}</h2>
+<child-comp-event
+  (onChanged)="onChanged($event)"
+></child-comp-event>
 
 
-<!--<h2>Lifecycle hooks</h2>-->
-<!--<lifecycle-hook [name]="name"></lifecycle-hook>-->
-<!--<input type="text" [(ngModel)]="name">-->
+<child-event-binding [(userName)]="name"></child-event-binding>
+<div>Выбранное имя: {{name}}</div>
 
 
-<!--<h2>Template reference variable</h2>-->
-<!--<template-ref-var #counter></template-ref-var>-->
-<!--<button (click)="counter.increment()">+</button>-->
-<!--<button (click)="counter.decrement()">-</button>-->
+<h2>Lifecycle hooks</h2>
+<lifecycle-hook [name]="name"></lifecycle-hook>
+<input type="text" [(ngModel)]="name">
+
+
+<h2>Template reference variable</h2>
+<template-ref-var #counter></template-ref-var>
+<button (click)="counter.increment()">+</button>
+<button (click)="counter.decrement()">-</button>
 
 
 <h2>Content Child</h2>
@@ -58,3 +58,5 @@
   <p>Angular 2 представляет модульную архитектуру приложения</p>
 </div>
 
+
+<app-http></app-http>

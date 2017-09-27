@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 import { LogService } from './log.service';
+import { HttpService } from './app-http/http.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [DataService, LogService]
+  providers: [DataService, LogService, HttpService]
 })
 
 export class AppComponent {
@@ -17,5 +18,4 @@ export class AppComponent {
   onChanged(increased) {
     increased === true ? this.clicks++ : this.clicks--;
   }
-
 }

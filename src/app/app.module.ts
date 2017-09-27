@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+
 import { ServiceComponent } from './service/service.component';
 import { DataComponent } from './data/data.component';
 import { LogService } from './log.service';
@@ -19,6 +20,8 @@ import { NgClassComponent } from './ng-class/ng-class.component';
 import { BoldHostListenerDirective } from './personal-directive/bold-host-listener.directive';
 import { BoldHostBindingDirective } from './personal-directive/bold-host-binding.directive';
 import { BoldDirective } from './personal-directive/font-input.directive';
+import { AppHttpComponent } from './app-http/app-http.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -38,10 +41,12 @@ import { BoldDirective } from './personal-directive/font-input.directive';
     BoldHostListenerDirective,
     BoldHostBindingDirective,
     BoldDirective,
+    AppHttpComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
   ],
   providers: [
     DataService,
