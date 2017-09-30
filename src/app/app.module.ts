@@ -32,6 +32,7 @@ import { AppPipesComponent } from './app-pipes/app-pipes.component';
 import { AppItemComponent } from './app-item/app-item.component';
 import { AppItemStatComponent } from './app-item/app-item.stat.component';
 import { AppItemDetailsComponent } from './app-item/app-item.details.component';
+import {AppFormComponent} from './app-form/app-form.component';
 
 const itemRoutes: Routes = [
   { path: 'details', component: AppItemDetailsComponent },
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
   { path: 'item', component: AppItemComponent },
   { path: 'item/:id', component: AppItemComponent },
   { path: 'item/:id', component: AppItemComponent, children: itemRoutes },
+  { path: 'form', component: AppFormComponent },
   { path: '**', redirectTo: '/' }
 ];
 
@@ -84,6 +86,7 @@ const appRoutes: Routes = [
     AppItemComponent,
     AppItemStatComponent,
     AppItemDetailsComponent,
+    AppFormComponent,
   ],
   imports: [
     BrowserModule,

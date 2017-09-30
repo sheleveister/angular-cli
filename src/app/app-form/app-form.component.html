@@ -1,0 +1,41 @@
+<div class="row">
+
+  <div class="col-md-12">
+    <label>Название модели</label>
+    <input class="form-control" name="title" [(ngModel)]="title" placeholder="0"/>
+
+  </div>
+
+  <div class="col-md-12">
+    <label>Цена</label>
+    <input type="number" class="form-control" name="price" [(ngModel)]="price" placeholder="0"/>
+  </div>
+
+  <div class="col-md-12">
+    <label>Производитель</label>
+    <select class="form-control" name="company" [(ngModel)]="company">
+      <option *ngFor="let comp of companies" [value]="comp">
+        {{ comp }}
+      </option>
+    </select>
+  </div>
+
+  <div class="col-md-12">
+    <button class="btn btn-primary" (click)="addPhone(title, price, company)">
+      Добавить
+    </button>
+  </div>
+
+  <div class="col-md-12">
+    <h3>Добавленные элементы</h3>
+    <ul *ngFor="let phone of phones">
+      <li>{{phone.title}} ({{phone.company}}) - {{phone.price}}</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+
