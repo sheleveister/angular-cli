@@ -26,6 +26,7 @@ import { AppHttpObservableComponent } from './app-http-observable/app-http-obser
 import { AppDirectivesComponent } from './app-directives/app-directives.component';
 import { AppStructuralDirectiveComponent } from './app-structural-directive/app-structural-directive.component';
 import { WhileDirective } from './app-structural-directive/while.directive';
+import { AppPipesComponent } from './app-pipes/app-pipes.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { WhileDirective } from './app-structural-directive/while.directive';
     AppDirectivesComponent,
     AppStructuralDirectiveComponent,
     WhileDirective,
+    AppPipesComponent,
   ],
   imports: [
     BrowserModule,
