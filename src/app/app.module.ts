@@ -22,6 +22,7 @@ import { BoldHostBindingDirective } from './personal-directive/bold-host-binding
 import { BoldDirective } from './personal-directive/font-input.directive';
 import { AppHttpComponent } from './app-http/app-http.component';
 import { HttpModule } from '@angular/http';
+import { AppHttpObservableComponent } from './app-http-observable/app-http-observable.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HttpModule } from '@angular/http';
     BoldHostBindingDirective,
     BoldDirective,
     AppHttpComponent,
+    AppHttpObservableComponent,
   ],
   imports: [
     BrowserModule,
