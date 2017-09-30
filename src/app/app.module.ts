@@ -23,6 +23,7 @@ import { BoldDirective } from './personal-directive/font-input.directive';
 import { AppHttpComponent } from './app-http/app-http.component';
 import { HttpModule } from '@angular/http';
 import { AppHttpObservableComponent } from './app-http-observable/app-http-observable.component';
+import { AppDirectivesComponent } from './app-directives/app-directives.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AppHttpObservableComponent } from './app-http-observable/app-http-obser
     BoldDirective,
     AppHttpComponent,
     AppHttpObservableComponent,
+    AppDirectivesComponent,
   ],
   imports: [
     BrowserModule,
