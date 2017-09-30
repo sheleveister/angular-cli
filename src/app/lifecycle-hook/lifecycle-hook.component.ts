@@ -1,16 +1,21 @@
 import {
   Component, Input,
   OnInit, DoCheck, OnChanges, OnDestroy,
-  AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked  } from '@angular/core';
+  AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked
+} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lifecycle-hook',
-  template: `<p>Привет {{name}}</p>`
+  templateUrl: 'lifecycle-hook.component.html'
 })
 
 export class LifecycleHookComponent implements OnInit, DoCheck, OnChanges, OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+
   @Input() name: string;
   public count: number = 1;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.log('ngOnInit');
@@ -47,6 +52,10 @@ export class LifecycleHookComponent implements OnInit, DoCheck, OnChanges, OnDes
   private log(msg: string) {
     console.log(this.count + '. ' + msg);
     this.count++;
+  }
+
+  public goHome() {
+    this.router.navigate(['']);
   }
 
 }

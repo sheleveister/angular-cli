@@ -1,0 +1,46 @@
+:host {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu {
+  width: 20%;
+  background-color: aliceblue;
+  margin: 0;
+  height: 100vh;
+  padding-left: 0;
+  padding-top: 50px;
+}
+
+li {
+  list-style-type: none;
+  & > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    &:active {
+      color: #000;
+    }
+    &:visited {
+      color: #000;
+    }
+    &:hover {
+      background-color: #e3ebf2;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  padding: 40px;
+  width: 80%;
+}
+
+.active {
+  background-color: #e3ebf2;
+}

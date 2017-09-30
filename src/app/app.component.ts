@@ -6,6 +6,7 @@ import { HttpService } from './app-http/http.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
   providers: [DataService, LogService, HttpService]
 })
 

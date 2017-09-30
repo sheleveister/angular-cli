@@ -1,25 +1,17 @@
 <div class="panel">
-  <div class="form-inline">
 
-    <div class="form-group">
-      <div class="col-md-8">
-        <input class="form-control" [(ngModel)]="name" placeholder="Модель">
-      </div>
+  <div class="row">
+    <div class="col-md-4">
+      <input class="form-control" [(ngModel)]="name" placeholder="Модель">
     </div>
-
-    <div class="form-group">
-      <div class="col-md-6">
-        <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена">
-      </div>
+    <div class="col-md-4">
+      <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена">
     </div>
-
-    <div class="form-group">
-      <div class="col-md-8">
-        <button class="btn" (click)="addItem(name, price)">Add</button>
-      </div>
+    <div class="col-md-4">
+      <button class="btn" (click)="addItem(name, price)">Add</button>
     </div>
-
   </div>
+
   <div class="table table-striped">
     <thead>
     <tr>
@@ -34,4 +26,5 @@
     </tr>
     </tbody>
   </div>
+
 </div>

@@ -1,70 +1,69 @@
-<phone></phone>
+<div class="wrapper">
+  <ul class="menu">
+    <li>
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        Angular
+      </a>
+    </li>
+    <li>
+      <a routerLink="/phone" routerLinkActive="active">
+        Add phone
+      </a>
+    </li>
+    <li>
+      <a routerLink="/purchapse" routerLinkActive="active">
+        Shopping list
+      </a>
+    </li>
+    <li>
+      <a routerLink="/data" routerLinkActive="active">
+        Phone list
+      </a>
+    </li>
+    <li>
+      <a routerLink="/binding" routerLinkActive="active">
+        Binding application
+      </a>
+    </li>
+    <li>
+      <a routerLink="/lifecycle-hook" routerLinkActive="active">
+        Lifecycle Hook
+      </a>
+    </li>
+    <li>
+      <a routerLink="/ng-class" routerLinkActive="active">
+        Content Child
+      </a>
+    </li>
+    <li>
+      <a routerLink="/http" routerLinkActive="active">
+        Http
+      </a>
+    </li>
+    <li>
+      <a routerLink="/directives" routerLinkActive="active">
+        Directives
+      </a>
+    </li>
+    <li>
+      <a routerLink="/structural-directives" routerLinkActive="active">
+        Structural Directive
+      </a>
+    </li>
+    <li>
+      <a routerLink="/pipes" routerLinkActive="active">
+        Pipes
+      </a>
+    </li>
+    <li>
+      <a routerLink="/item" routerLinkActive="active">
+        Child routes
+      </a>
+    </li>
 
-<service></service>
+  </ul>
 
-<data></data>
-
-<app-purchapse></app-purchapse>
-
-<app-binding></app-binding>
-
-
-<child-comp
-  [userName]="name"
-  [userAge]="age"
-></child-comp>
-<input type="text" [(ngModel)]="name">
-<input type="text" [(ngModel)]="age" placeholder="Возраст пользователя">
-
-
-<h2>Количество кликов: {{clicks}}</h2>
-<child-comp-event
-  (onChanged)="onChanged($event)"
-></child-comp-event>
-
-
-<child-event-binding [(userName)]="name"></child-event-binding>
-<div>Выбранное имя: {{name}}</div>
-
-
-<h2>Lifecycle hooks</h2>
-<lifecycle-hook [name]="name"></lifecycle-hook>
-<input type="text" [(ngModel)]="name">
-
-
-<h2>Template reference variable</h2>
-<template-ref-var #counter></template-ref-var>
-<button (click)="counter.increment()">+</button>
-<button (click)="counter.decrement()">-</button>
-
-
-<h2>Content Child</h2>
-<app-child-comp>
-  <h3 #headerContent>Welcome {{name}}! This is content child </h3>
-</app-child-comp>
-
-
-<app-ng-class></app-ng-class>
-
-
-<h2>Personal directive</h2>
-<div>
-  <p bold>Hello Angular 2 - this text is bold </p>
-  <p>Angular 2 представляет модульную архитектуру приложения</p>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-
-<div>
-  <p bold [selectedSize]="'18px'" [defaultSize]="'14px'">Hello Angular 2</p>
-  <p>Angular 2 представляет модульную архитектуру приложения</p>
-</div>
-
-
-<app-http></app-http>
-
-<app-http-observable></app-http-observable>
-
-<app-directives></app-directives>
-
-<app-structural-directive></app-structural-directive>
-
-<app-pipes></app-pipes>

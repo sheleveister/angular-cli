@@ -10,7 +10,6 @@ export class Item {
     this.done = false;
     this.price = price;
   }
-
 }
 
 @Component({
@@ -20,15 +19,14 @@ export class Item {
 })
 
 export class AppPurchapseComponent {
-
   items: Item[] = [
     { purchapse: 'Хлеб', done: false, price: 15 },
     { purchapse: 'Масло', done: false, price: 60 },
     { purchapse: 'Картофель', done: true, price: 22 },
     { purchapse: 'Сыр', done: false, price: 310 },
   ];
+
   addItem(text: string, price: number): void {
     this.items.push(new Item(text, price));
   }
-
 }
